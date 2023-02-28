@@ -3,9 +3,13 @@ import DefaultErrorPage from 'next/error';
 import Header from '@/components/Header';
 import Head from 'next/head';
 import React from 'react';
-import { BuilderComponent, builder, useIsPreviewing, Builder } from '@builder.io/react';
+import {
+  BuilderComponent,
+  builder,
+  useIsPreviewing,
+  Builder,
+} from '@builder.io/react';
 import Footer from '@/components/Footer';
-
 
 // Initialize the Builder SDK with your organization's API Key
 // Find the API Key on: https://builder.io/account/settings
@@ -41,7 +45,7 @@ export async function getStaticPaths() {
   });
 
   return {
-    paths: pages.map(page => `${page.data?.url}`),
+    paths: pages.map((page) => `${page.data?.url}`),
     fallback: true,
   };
 }
@@ -67,29 +71,29 @@ export default function Page({ page }) {
         {/* Add any relevant SEO metadata or open graph tags here */}
         <title>{page?.data.title}</title>
         <meta name="description" content={page?.data.descripton} />
-  
-        
       </Head>
-      <div>
+      <header>
         {/* Put your header or main layout here */}
-        <Header/>
-      </div>
+        <Header />
+      </header>
 
       {/* Render the Builder page */}
-      <BuilderComponent model="page" content={page} />
+      <main>
+        <BuilderComponent model="page" content={page} />
+      </main>
 
-      <div>
+      <footer>
         {/* Put your footer or main layout here */}
-        <Footer/>
-      </div>
+        <Footer />
+      </footer>
     </>
   );
 }
 
-//  This is an example of registering a custom component to be used in Builder.io. 
+//  This is an example of registering a custom component to be used in Builder.io.
 //  You would typically do this in the file where the component is defined.
 
-const MyCustomComponent = props => (
+const MyCustomComponent = (props) => (
   <div>
     <h1>{props.title}</h1>
     <p>{props.description}</p>

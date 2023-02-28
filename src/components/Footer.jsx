@@ -1,3 +1,10 @@
+import Link from "next/link";
+import AppleBadge from './assets/images/Apple-Badge.png';
+import GoogleBadge from './assets/images/Google-Badge.png';
+import EqualHousing from './assets/images/Equal_Housing_Opportunity.png';
+import NCUA from './assets/images/NCUA.png';
+import COOP from './assets/images/Coop-Network-Footer.png';
+
 const Footer = () => {
   return (
     <>
@@ -5,12 +12,12 @@ const Footer = () => {
         <div className="container">
           <div className="footer-contact">
             <div className="col-sm-12 col-xl-4 footer-contact-address">
-              <a
+              <Link
                 href="/Personal/contact-us.html"
                 className="header footer-contact-link"
               >
                 Contact Us
-              </a>
+              </Link>
               <div>
                 4605 S Old US Hwy 23, Brighton, MI 48114
                 <br />
@@ -19,63 +26,63 @@ const Footer = () => {
             </div>
 
             <div className="col-sm-12 col-xl-4 footer-contact-social">
-              <a
+              <Link
                 href="https://www.facebook.com/LakeTrustCreditUnion"
                 target="_blank"
                 aria-label="Facebook"
                 className="external-link"
               >
                 <i className="fa fa-facebook-f" aria-hidden="true"></i>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://twitter.com/laketrust"
                 target="_blank"
                 aria-label="Twitter"
                 className="external-link"
               >
                 <i className="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.linkedin.com/company/lake-trust-credit-union"
                 target="_blank"
                 aria-label="Linked In"
                 className="external-link"
               >
                 <i className="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.instagram.com/laketrust/"
                 target="_blank"
                 aria-label="Instagram"
                 className="external-link"
               >
                 <i className="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.pinterest.com/laketrust/"
                 target="_blank"
                 aria-label="Pinterest"
                 className="external-link"
               >
                 <i className="fa fa-pinterest-p" aria-hidden="true"></i>
-              </a>
+              </Link>
             </div>
 
             <div className="col-sm-12 col-xl-4 footer-contact-apps">
               <div className="header">Download Our Free Mobile App</div>
               <div>
-                <a
+                <Link
                   href="https://apps.apple.com/us/app/lake-trust-credit-union/id943022011"
                   target="_blank"
                 >
-                  <img src="/Apple-Badge.png" alt="Apple App Store" />
-                </a>
-                <a
+                  <img src={AppleBadge.src} alt="Apple App Store" />
+                </Link>
+                <Link
                   href="https://play.google.com/store/apps/details?id=com.ifs.banking.fiid1570"
                   target="_blank"
                 >
-                  <img src="/Google-Badge.png" alt="Google Play" />
-                </a>
+                  <img src={GoogleBadge.src} alt="Google Play" />
+                </Link>
               </div>
             </div>
           </div>
@@ -87,17 +94,17 @@ const Footer = () => {
               Routing Number: <strong>272078268</strong>
             </span>
             <div className="col-sm-12 col-xl-9">
-              <a href="/Personal/Forms.html">Forms</a>
-              <a href="/Our-Story/Careers.html">Careers</a>
-              <a href="/Privacy.html">Privacy</a>
-              <a href="/Disclosures.html">Disclosures</a>
-              <a href="/Sitemap.html">Sitemap</a>
-              <a
+              <Link href="/Personal/Forms.html">Forms</Link>
+              <Link href="/Our-Story/Careers.html">Careers</Link>
+              <Link href="/Privacy.html">Privacy</Link>
+              <Link href="/Disclosures.html">Disclosures</Link>
+              <Link href="/Sitemap.html">Sitemap</Link>
+              <Link
                 href="https://latest.laketrust.org/blog/topic/financial-safety"
                 target="_blank"
               >
                 Security Center
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -111,17 +118,17 @@ const Footer = () => {
                 <span className="phone-replace">888.267.7200</span> for
                 assistance. All products and services available on this website
                 are available at all branch{" "}
-                <a href="locations.html">locations</a>.
+                <Link href="/locations">locations</Link>.
               </p>
             </div>
 
             <div className="col-xl-4">
               <img
-                src="/Equal_Housing_Opportunity.png"
+                src={EqualHousing.src}
                 alt="Equal Housing Opportunity"
               />
-              <img src="/NCUA.png" />
-              <img src="/Coop-Network-Footer.png" />
+              <img src={NCUA.src} />
+              <img src={COOP.src}/>
             </div>
           </div>
 
@@ -135,19 +142,19 @@ const Footer = () => {
           <div className="container">
             <p>
               We&rsquo;re going to be really close friends.{" "}
-              <a
+              <Link
                 className="oao-link"
                 href="https://join.laketrust.org"
                 target="_blank"
               >
                 Sign up today to become a member.
-              </a>
+              </Link>
             </p>
           </div>
 
-          <a href="#top" className="scroll" aria-label="Scroll to top of screen">
+          <Link href="#top" className="scroll" aria-label="Scroll to top of screen">
             <i className="icon-up"></i>
-          </a>
+          </Link>
         </div>
     </>
   );

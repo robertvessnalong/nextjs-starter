@@ -1,71 +1,74 @@
+import Logo from './assets/images/LakeTrustLogo_Horizontal_NoTagline_White.png'
+import Link from 'next/link';
+
 const Header = () => {
   return (
     <>
       <nav className="main-nav">
-        <a href="/index.html" className="logo" tabIndex="0">
-          <img
-            src="/LakeTrustLogo_Horizontal_NoTagline_White.png"
+        <Link href='/' className='logo'>
+        <img
+            src={Logo.src}
             alt="Lake Trust Credit Union"
             className="ie-logo"
           />
-        </a>
+        </Link>
         <ul className="list-left">
           <li className="btn">
-            <a
-              href="/Personal/"
+            <Link
+              href="/personal"
               tabIndex="1"
               data-name="personal"
               id="personal"
             >
               Personal
-            </a>
+            </Link>
           </li>
           <li className="btn">
-            <a
-              href="/Business/"
+            <Link
+              href="/business/"
               tabIndex="2"
               data-name="commercial"
               id="business"
             >
               Business
-            </a>
+            </Link>
           </li>
           <li className="btn">
-            <a href="/Our-Story/" tabIndex="3" data-name="explore" id="explore">
+            <Link href="/our-story" tabIndex="3" data-name="explore" id="explore">
               Our Story
-            </a>
+            </Link>
           </li>
         </ul>
         <ul className="list-right">
           <li className="btn search-icon">
-            <a href="/search.html" aria-label="Open Search" tabIndex="0">
+            <Link href="/search" aria-label="Open Search" tabIndex="0">
               <i className="material-icons">search</i>
-            </a>
+            </Link>
           </li>
           <li className="btn authentication-box">
             <div className="clickToRemove"></div>
-            <a href="#" tabIndex="5" data-name="signin">
+            <Link href="#" tabIndex="5" data-name="signin">
               Sign In
-            </a>
+            </Link>
             <div className="login-container">
               <div className="dropdown-box" id="login-form">
                 <div className="top">
-                  <a
+                  <Link
                     href="#"
                     className="account-type"
                     id="personal-account"
                     aria-label="Personal"
                   >
                     Personal
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="#"
                     className="account-type"
                     id="commercial-account"
                     aria-label="Commercial"
                   >
                     Business
-                  </a>
+                  </Link>
                 </div>
                 <form id="personal-form" style={{display: "block"}}>
                   <div className="form-error"style={{display: "none"}}></div>
@@ -103,17 +106,17 @@ const Header = () => {
                   <hr />
                   <div className="bottom">
                     <div>
-                      <a
+                      <Link
                         href="https://www.laketrustonline.org/tob/live/usp-core/app/authUpdate"
                         tabIndex="0"
                         className="passwordLink"
                       >
                         {" "}
                         I forgot my username / password.{" "}
-                      </a>
+                      </Link>
                     </div>{" "}
                     First time user?{" "}
-                    <a
+                    <Link
                       href="/get-online-banking"
                       id="online-banking-enrollment"
                       tabIndex="0"
@@ -121,18 +124,18 @@ const Header = () => {
                     >
                       {" "}
                       Enroll here.{" "}
-                    </a>
+                    </Link>
                   </div>
                   <hr />
                   <div className="bottom">Make a one-time loan payment</div>
-                  <a
+                  <Link
                     href="https://payments.laketrust.org"
                     className="payments-link dark-btn"
                     tabIndex="0"
                     target="_blank"
                   >
                     Pay Your Loan
-                  </a>
+                  </Link>
                 </form>
                 <form id="commercial-form"  style={{display: "none"}}>
                   <div className="input-group">
@@ -172,24 +175,24 @@ const Header = () => {
                   <hr />
                   <div className="bottom">
                     <div>
-                      <a
+                      <Link
                         href="https://onlinebanking.laketrust.org/LakeTrustCreditUnionOnline/uux.aspx#/login/resetPasswordUsername"
                         tabIndex="0"
                         className="passwordLink"
                       >
                         {" "}
                         I forgot my username / password.{" "}
-                      </a>
+                      </Link>
                     </div>
                     <div>Don't have business membership?</div>
-                    <a
+                    <Link
                       href="/LakeTrustWebsite/media/pdfs/CommercialMembershipBooklet-Online-1.pdf"
                       tabIndex="0"
                       target="_blank"
                     >
                       {" "}
                       View Application (PDF){" "}
-                    </a>
+                    </Link>
                   </div>
                 </form>
               </div>
@@ -200,35 +203,35 @@ const Header = () => {
             >
               <ul className="authenticated-menu">
                 <li>
-                  <a href="#" className="launcholb">
+                  <Link href="#" className="launcholb">
                     Launch Online Banking
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://payments.laketrust.org">Pay My Loan</a>
+                  <Link href="https://payments.laketrust.org">Pay My Loan</Link>
                 </li>
                 <li>
-                  <a href="#" className="logout-button">
+                  <Link href="#" className="logout-button">
                     Sign Out
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
           <li className="btn">
-            <a
+            <Link
               href="https://join.laketrust.org/#/"
               tabIndex="6"
               target="_blank"
               className="join oao-link"
             >
               Join
-            </a>
+            </Link>
           </li>
           <li className="btn">
-            <a href="/locations.html" tabIndex="4">
+            <Link href="/locations.html" tabIndex="4">
               Locations
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -236,33 +239,33 @@ const Header = () => {
         <div className="sub-nav-container personal">
           <ul className="sub-nav-list">
             <li className="sub-nav-list-item">
-              <a href="#" className="has-dropdown">
+              <Link href="#" className="has-dropdown">
                 Banking
-              </a>
+              </Link>
               <div className="sub-nav-dropdown">
                 <div className="col-6">
                   <ul>
                     <li>
-                      <a href="/Personal/Banking/Savings-Accounts.html">
+                      <Link href="/Personal/Banking/Savings-Accounts.html">
                         Savings Accounts
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Personal/Banking/Checking-Accounts.html">
+                      <Link href="/Personal/Banking/Checking-Accounts.html">
                         Checking Accounts
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Personal/Banking/CDs.html">CD Accounts</a>
+                      <Link href="/Personal/Banking/CDs.html">CD Accounts</Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="/Personal/Banking/Credit-Cards.html"
                         name="Personal Banking Credit Card"
                         className="ccard"
                       >
                         Credit Cards
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -273,53 +276,53 @@ const Header = () => {
                   <p className="sub-nav-dropdown-text">
                     Start saving for a trip or special event.
                   </p>
-                  <a
+                  <Link
                     className="sub-nav-dropdown-button"
                     href="/Personal/Banking/Savings-Accounts.html"
                   >
                     Learn More
-                  </a>
+                  </Link>
                 </div>
               </div>
             </li>
             <li className="sub-nav-list-item">
-              <a href="#" className="has-dropdown">
+              <Link href="#" className="has-dropdown">
                 Loans
-              </a>
+              </Link>
               <div className="sub-nav-dropdown">
                 <div className="col-6">
                   <ul>
                     <li>
-                      <a href="/Personal/Loans/Vehicle-Loans.html">
+                      <Link href="/Personal/Loans/Vehicle-Loans.html">
                         Vehicle Loans
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Personal/Loans/Home-Loans.html">Home Loans</a>
+                      <Link href="/Personal/Loans/Home-Loans.html">Home Loans</Link>
                     </li>
                     <li>
-                      <a href="/Personal/Loans/Personal-Loans.html">
+                      <Link href="/Personal/Loans/Personal-Loans.html">
                         Personal Loans
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Personal/Loans/Student-Loans.html">
+                      <Link href="/Personal/Loans/Student-Loans.html">
                         Student Loans
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="/Personal/Banking/Credit-Cards.html"
                         name="Personal Loans Credit Card"
                         className="ccard"
                       >
                         Credit Cards
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Personal/Loans/Life-Impact-Loan.html">
+                      <Link href="/Personal/Loans/Life-Impact-Loan.html">
                         Life Impact Loan
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -330,68 +333,68 @@ const Header = () => {
                   <p className="sub-nav-dropdown-text" style={{width: 100}}>
                     Making a one-time loan payment has never been easier.
                   </p>
-                  <a
+                  <Link
                     className="sub-nav-dropdown-button payments-link"
                     href="https://payments.laketrust.org/#/"
                     target="_blank"
                   >
                     Pay Your Loan
-                  </a>
+                  </Link>
                 </div>
               </div>
             </li>
             <li className="sub-nav-list-item">
-              <a href="/financial-life-planning/">Invest and Insure</a>
+              <Link href="/financial-life-planning/">Invest and Insure</Link>
             </li>
             <li className="sub-nav-list-item">
-              <a href="#" className="has-dropdown">
+              <Link href="#" className="has-dropdown">
                 Resources
-              </a>
+              </Link>
               <div className="sub-nav-dropdown">
                 <div className="col-6">
                   <ul>
                     <li>
-                      <a href="/Personal/Resources/Skip-a-Payment.html">
+                      <Link href="/Personal/Resources/Skip-a-Payment.html">
                         Skip a Payment
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Personal/Resources/Current-Rates.html">
+                      <Link href="/Personal/Resources/Current-Rates.html">
                         Current Rates
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Personal/Resources/Account-Management-Tools.html">
+                      <Link href="/Personal/Resources/Account-Management-Tools.html">
                         Account Management Tools
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Personal/Resources/E-Statements.html">
+                      <Link href="/Personal/Resources/E-Statements.html">
                         E-Statements
-                      </a>
+                      </Link>
                     </li>
 
                     <li>
-                      <a href="/Personal/Resources/FraudEducation.html">
+                      <Link href="/Personal/Resources/FraudEducation.html">
                         Fraud Education
-                      </a>
+                      </Link>
                     </li>
 
                     <li>
-                      <a href="/Personal/Resources/knowledge-hub.html">
+                      <Link href="/Personal/Resources/knowledge-hub.html">
                         Knowledge Hub
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="/LakeTrustWebsite/media/Assets/Fee-Schedule-Personal-Banking.pdf"
                         target="_blank"
                       >
                         Fee Schedule
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Personal/Forms.html">Forms</a>
+                      <Link href="/Personal/Forms.html">Forms</Link>
                     </li>
                   </ul>
                 </div>
@@ -402,66 +405,66 @@ const Header = () => {
                   <p className="sub-nav-dropdown-text">
                     You’re gonna love it here.
                   </p>
-                  <a
+                  <Link
                     className="sub-nav-dropdown-button oao-link"
                     href="https://join.laketrust.org/#/"
                     target="_blank"
                   >
                     Join Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </li>
             <li className="sub-nav-list-item">
-              <a href="/Personal/contact-us.html">Contact Us</a>
+              <Link href="/Personal/contact-us.html">Contact Us</Link>
             </li>
           </ul>
         </div>
         <div className="sub-nav-container commercial">
           <ul className="sub-nav-list">
             <li className="sub-nav-list-item">
-              <a href="#" className="has-dropdown">
+              <Link href="#" className="has-dropdown">
                 Business Banking
-              </a>
+              </Link>
               <div className="sub-nav-dropdown">
                 <div className="col-6">
                   <ul>
                     <li>
-                      <a href="/Business/Banking/Checking-Accounts.html">
+                      <Link href="/Business/Banking/Checking-Accounts.html">
                         Business Checking
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Business/Banking/CDs.html">Business CD</a>
+                      <Link href="/Business/Banking/CDs.html">Business CD</Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="/Business/Banking/Credit-Cards.html"
                         name="Business Banking Credit Card"
                         className="ccard"
                       >
                         Business Credit Card
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Business/Banking/Membership.html">
+                      <Link href="/Business/Banking/Membership.html">
                         Business Membership
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Business/Banking/Savings-Accounts.html">
+                      <Link href="/Business/Banking/Savings-Accounts.html">
                         Business Savings
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Business/Banking/Treasury-Services.html">
+                      <Link href="/Business/Banking/Treasury-Services.html">
                         Treasury Services
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Business/Banking/Digital-Solutions.html">
+                      <Link href="/Business/Banking/Digital-Solutions.html">
                         Digital Solutions
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -472,53 +475,53 @@ const Header = () => {
                   <p className="sub-nav-dropdown-text">
                     Get the tools you need to manage your business efficiently.
                   </p>
-                  <a
+                  <Link
                     className="sub-nav-dropdown-button"
                     href="/Business/Banking/Treasury-Services.html"
                   >
                     Learn More
-                  </a>
+                  </Link>
                 </div>
               </div>
             </li>
             <li className="sub-nav-list-item">
-              <a href="#" className="has-dropdown">
+              <Link href="#" className="has-dropdown">
                 Loans
-              </a>
+              </Link>
               <div className="sub-nav-dropdown">
                 <div className="col-6">
                   <ul>
                     <li>
-                      <a
+                      <Link
                         href="/Business/Banking/Credit-Cards.html"
                         name="Business Loans Credit Card"
                         className="ccard"
                       >
                         Business Credit Card
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Business/Loans/Real-Estate-Mortgage.html">
+                      <Link href="/Business/Loans/Real-Estate-Mortgage.html">
                         Business Real Estate
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Business/Loans/Term-Loans.html">
+                      <Link href="/Business/Loans/Term-Loans.html">
                         Business Term Loan
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Business/Loans/Line-of-Credit.html">
+                      <Link href="/Business/Loans/Line-of-Credit.html">
                         Business Line of Credit
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Business/Loans/SBA-Loans.html">SBA Loans</a>
+                      <Link href="/Business/Loans/SBA-Loans.html">SBA Loans</Link>
                     </li>
                     <li>
-                      <a href="/Business/Loans/Micro-Business-Loan.html">
+                      <Link href="/Business/Loans/Micro-Business-Loan.html">
                         Small Business Microloans
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -529,38 +532,38 @@ const Header = () => {
                   <p className="sub-nav-dropdown-text">
                     We love supporting local Michigan businesses.
                   </p>
-                  <a
+                  <Link
                     className="sub-nav-dropdown-button"
                     href="/Business/"
                     target="_blank"
                   >
                     Learn More
-                  </a>
+                  </Link>
                 </div>
               </div>
             </li>
             <li className="sub-nav-list-item">
-              <a href="/financial-life-planning/">Invest and Insure</a>
+              <Link href="/financial-life-planning/">Invest and Insure</Link>
             </li>
             <li className="sub-nav-list-item">
-              <a href="#" className="has-dropdown">
+              <Link href="#" className="has-dropdown">
                 Resources
-              </a>
+              </Link>
               <div className="sub-nav-dropdown">
                 <div className="col-6">
                   <ul>
                     <li>
-                      <a href="/Business/Resources/Video-Library.html">
+                      <Link href="/Business/Resources/Video-Library.html">
                         Video Library
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Business/Resources/Current-Rates.html">
+                      <Link href="/Business/Resources/Current-Rates.html">
                         Current Rates
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/Business/Resources/Forms.html">Forms</a>
+                      <Link href="/Business/Resources/Forms.html">Forms</Link>
                     </li>
                   </ul>
                 </div>
@@ -571,46 +574,46 @@ const Header = () => {
                   <p className="sub-nav-dropdown-text">
                     Check your balances and pay your bills on one easy place.
                   </p>
-                  <a
+                  <Link
                     className="sub-nav-dropdown-button"
                     href="/Business/Banking/Digital-Solutions.html"
                     target="_blank"
                   >
                     Learn More
-                  </a>
+                  </Link>
                 </div>
               </div>
             </li>
             <li className="sub-nav-list-item">
-              <a href="/Business/Contact-Us.html">Contact Us</a>
+              <Link href="/Business/Contact-Us.html">Contact Us</Link>
             </li>
           </ul>
         </div>
         <div className="sub-nav-container explore">
           <ul className="sub-nav-list">
             <li className="sub-nav-list-item">
-              <a href="/Our-Story/Careers.html">Careers</a>
+              <Link href="/Our-Story/Careers.html">Careers</Link>
             </li>
             <li className="sub-nav-list-item">
-              <a href="/foundation/doing-good.html">Community Impact</a>
+              <Link href="/foundation/doing-good.html">Community Impact</Link>
             </li>
             <li className="sub-nav-list-item">
-              <a href="#" className="has-dropdown">
+              <Link href="#" className="has-dropdown">
                 Foundation
-              </a>
+              </Link>
               <div className="sub-nav-dropdown">
                 <div className="col-6">
                   <ul>
                     <li>
-                      <a href="/foundation/">About the Foundation</a>
+                      <Link href="/foundation/">About the Foundation</Link>
                     </li>
                     <li>
-                      <a href="/foundation/Lake-Trust-Foundation">
+                      <Link href="/foundation/Lake-Trust-Foundation">
                         Golf Outing
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/foundation/Scholarships">Scholarships</a>
+                      <Link href="/foundation/Scholarships">Scholarships</Link>
                     </li>
                   </ul>
                 </div>
@@ -622,41 +625,41 @@ const Header = () => {
                     Support the Lake Trust Foundation to make an impact in your
                     community.
                   </p>
-                  <a className="sub-nav-dropdown-button" href="/Foundation/#donate">
+                  <Link className="sub-nav-dropdown-button" href="/Foundation/#donate">
                     Donate Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </li>
             <li className="sub-nav-list-item">
-              <a href="/Our-Story/Annual-Impact-Report/2021/">Impact Report</a>
+              <Link href="/Our-Story/Annual-Impact-Report/2021/">Impact Report</Link>
             </li>
             <li className="sub-nav-list-item">
-              <a href="https://latest.laketrust.org/blog" target="_blank">
+              <Link href="https://latest.laketrust.org/blog" target="_blank">
                 Blog
-              </a>
+              </Link>
             </li>
             <li className="sub-nav-list-item">
-              <a href="/Our-Story/Board-Financial-Information.html">
+              <Link href="/Our-Story/Board-Financial-Information.html">
                 Board &amp; Financial Info
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
       </nav>
       <nav className="mobile-nav">
-    <a href="../index.html" className="logo" tabIndex="0">
+    <Link href="../index.html" className="logo" tabIndex="0">
         {/* <img src="LakeTrustWebsite/media/site/LTCULOGO.png" alt="Lake Trust Credit Union" className="not-ie-logo">  */}
         <img src="/LakeTrustLogo_Horizontal_NoTagline_White.png" alt="Lake Trust Credit Union" className="ie-logo" />
-    </a>
+    </Link>
 
-    <a href="../search.html" id="search-icon" aria-label="Open Search" tabIndex="0">
+    <Link href="../search.html" id="search-icon" aria-label="Open Search" tabIndex="0">
         <i className="material-icons">
             search
         </i>
-    </a>
+    </Link>
 
-    <a href="#" tabIndex="5" data-name="signin" className="tablet-nav-signin" style={{position: 'absolute', right: 85, color: '#fff'}}>Sign In</a>
+    <Link href="#" tabIndex="5" data-name="signin" className="tablet-nav-signin" style={{position: 'absolute', right: 85, color: '#fff'}}>Sign In</Link>
 
     <div className="bar-wrapper">
         <div className="top bar"></div>
@@ -681,9 +684,9 @@ const Header = () => {
             <div className="mobile-nav-list-divider"></div>
 
             <ul>
-                <li><a href="/locations.html">Locations</a></li>
-                <li><a href="/Personal/contact-us.html">Contact</a></li>
-                <li><a href="https://join.laketrust.org/#/" target="_blank" className="join oao-link">Join</a></li>
+                <li><Link href="/locations.html">Locations</Link></li>
+                <li><Link href="/Personal/contact-us.html">Contact</Link></li>
+                <li><Link href="https://join.laketrust.org/#/" target="_blank" className="join oao-link">Join</Link></li>
             </ul>
         </div>
     </div>
