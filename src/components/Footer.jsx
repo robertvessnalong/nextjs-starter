@@ -1,9 +1,4 @@
 import Link from "next/link";
-import AppleBadge from './assets/images/Apple-Badge.png';
-import GoogleBadge from './assets/images/Google-Badge.png';
-import EqualHousing from './assets/images/Equal_Housing_Opportunity.png';
-import NCUA from './assets/images/NCUA.png';
-import COOP from './assets/images/Coop-Network-Footer.png';
 
 const Footer = () => {
   return (
@@ -75,13 +70,13 @@ const Footer = () => {
                   href="https://apps.apple.com/us/app/lake-trust-credit-union/id943022011"
                   target="_blank"
                 >
-                  <img src={AppleBadge.src} alt="Apple App Store" />
+                  <img src="/assets/images/Apple-Badge.png" alt="Apple App Store" />
                 </Link>
                 <Link
                   href="https://play.google.com/store/apps/details?id=com.ifs.banking.fiid1570"
                   target="_blank"
                 >
-                  <img src={GoogleBadge.src} alt="Google Play" />
+                  <img src="/assets/images/Google-Badge.png" alt="Google Play" />
                 </Link>
               </div>
             </div>
@@ -118,17 +113,17 @@ const Footer = () => {
                 <span className="phone-replace">888.267.7200</span> for
                 assistance. All products and services available on this website
                 are available at all branch{" "}
-                <Link href="/locations">locations</Link>.
+                <Link href="locations.html">locations</Link>.
               </p>
             </div>
 
             <div className="col-xl-4">
               <img
-                src={EqualHousing.src}
+                src="/assets/images/Equal_Housing_Opportunity.png"
                 alt="Equal Housing Opportunity"
               />
-              <img src={NCUA.src} />
-              <img src={COOP.src}/>
+              <img src="/assets/images/NCUA.png" />
+              <img src="/assets/images/Coop-Network-Footer.png" />
             </div>
           </div>
 

@@ -1,4 +1,4 @@
-import Logo from './assets/images/LakeTrustLogo_Horizontal_NoTagline_White.png'
+
 import Link from 'next/link';
 
 const Header = () => {
@@ -7,7 +7,7 @@ const Header = () => {
       <nav className="main-nav">
         <Link href='/' className='logo'>
         <img
-            src={Logo.src}
+            src='/assets/images/LakeTrustLogo_Horizontal_NoTagline_White.png'
             alt="Lake Trust Credit Union"
             className="ie-logo"
           />
@@ -650,7 +650,7 @@ const Header = () => {
       <nav className="mobile-nav">
     <Link href="../index.html" className="logo" tabIndex="0">
         {/* <img src="LakeTrustWebsite/media/site/LTCULOGO.png" alt="Lake Trust Credit Union" className="not-ie-logo">  */}
-        <img src="/LakeTrustLogo_Horizontal_NoTagline_White.png" alt="Lake Trust Credit Union" className="ie-logo" />
+        <img src='/assets/images/LakeTrustLogo_Horizontal_NoTagline_White.png' alt="Lake Trust Credit Union" className="ie-logo" />
     </Link>
 
     <Link href="../search.html" id="search-icon" aria-label="Open Search" tabIndex="0">
