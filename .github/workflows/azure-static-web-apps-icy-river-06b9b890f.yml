@@ -19,7 +19,7 @@ on:
 
 jobs:
   build_and_deploy_job:
-    if: (github.event_name == 'push' || github.event.name == 'workflow_dispatch') || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
@@ -40,7 +40,7 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "out" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-        env:
+         env:
           NEXT_PUBLIC_BUILDER_KEY: ${{secrets.NEXT_PUBLIC_BUILDER_KEY}}
           is_static_export: true
 
