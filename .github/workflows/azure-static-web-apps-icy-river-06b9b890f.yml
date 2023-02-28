@@ -19,7 +19,7 @@ jobs:
         with:
           submodules: true
         env: 
-          NEXT_PUBLIC_BUILDER_KEY: ${{secrets.NEXT_PUBLIC_BUILDER_KEY}}
+          next_app: ${{secrets.NEXT_PUBLIC_BUILDER_KEY}}
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
