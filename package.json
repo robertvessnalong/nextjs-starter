@@ -1,28 +1,21 @@
 {
-  "name": "nextjs-static-website",
+  "name": "newsite",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=16.16.0"
+  },
   "scripts": {
-    "build": "next build && next export",
     "dev": "next dev",
-    "fix": "next lint --fix",
-    "lint": "next lint",
+    "build": "next build && next export",
     "start": "next start",
-    "test": "playwright test"
+    "lint": "next lint"
   },
   "dependencies": {
-    "isomorphic-unfetch": "^3.0.0",
-    "next": "^12.1.6",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.20.0",
-    "eslint": "^8.11.0",
-    "eslint-config-next": "^12.1.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.6.0",
-    "serve": "^13.0.2"
+    "@builder.io/react": "^2.0.14",
+    "@next/font": "13.2.1",
+    "next": "13.2.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   }
 }
