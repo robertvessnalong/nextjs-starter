@@ -51,7 +51,6 @@ export async function getStaticPaths() {
 }
 
 export default function Page({ page }) {
-  console.log(page)
   const router = useRouter();
   //  This flag indicates if you are viewing the page in the Builder editor.
   const isPreviewing = useIsPreviewing();
@@ -111,5 +110,5 @@ Builder.registerComponent(Header, {
 // https://www.builder.io/c/docs/custom-components-visual-editor#:~:text=than%20this%20screenshot.-,organizing%20your%20components%20in%20custom%20sections,-You%20can%20create
 Builder.register('insertMenu', {
   name: 'My Components',
-  items: [{ item: 'Header', name: 'My React Component' }],
+  items: [{ item: 'Header', name: 'Header' }],
 });
