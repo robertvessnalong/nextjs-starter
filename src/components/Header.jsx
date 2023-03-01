@@ -1,5 +1,7 @@
+import {
+  Builder
+} from '@builder.io/react';
 import Link from 'next/link';
-
 
 const Header = () => {
   return (
@@ -694,4 +696,18 @@ const Header = () => {
     </>
   );
 };
-export default Header;
+
+
+//  This is a minimal example of a custom component, you can view more complex input types here:
+//  https://www.builder.io/c/docs/custom-react-components#input-types
+Builder.registerComponent(Header, {
+  name: 'Header',
+  inputs: [
+    { name: 'title', type: 'string', defaultValue: 'I am a React component!' },
+    {
+      name: 'description',
+      type: 'string',
+      defaultValue: 'Find my source in /pages/[...page].js',
+    },
+  ],
+});

@@ -72,10 +72,6 @@ export default function Page({ page }) {
         <title>{page?.data.title}</title>
         <meta name="description" content={page?.data.descripton} />
       </Head>
-      <header>
-        {/* Put your header or main layout here */}
-        <Header />
-      </header>
 
       {/* Render the Builder page */}
       <main>
@@ -91,20 +87,6 @@ export default function Page({ page }) {
 }
 
 
-
-//  This is a minimal example of a custom component, you can view more complex input types here:
-//  https://www.builder.io/c/docs/custom-react-components#input-types
-Builder.registerComponent(Header, {
-  name: 'Header',
-  inputs: [
-    { name: 'title', type: 'string', defaultValue: 'I am a React component!' },
-    {
-      name: 'description',
-      type: 'string',
-      defaultValue: 'Find my source in /pages/[...page].js',
-    },
-  ],
-});
 
 // Register a custom insert menu to organize your custom componnets
 // https://www.builder.io/c/docs/custom-components-visual-editor#:~:text=than%20this%20screenshot.-,organizing%20your%20components%20in%20custom%20sections,-You%20can%20create
