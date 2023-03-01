@@ -51,6 +51,7 @@ export async function getStaticPaths() {
 }
 
 export default function Page({ page }) {
+  console.log(page)
   const router = useRouter();
   //  This flag indicates if you are viewing the page in the Builder editor.
   const isPreviewing = useIsPreviewing();
@@ -90,20 +91,12 @@ export default function Page({ page }) {
   );
 }
 
-//  This is an example of registering a custom component to be used in Builder.io.
-//  You would typically do this in the file where the component is defined.
 
-const MyCustomComponent = (props) => (
-  <div>
-    <h1>{props.title}</h1>
-    <p>{props.description}</p>
-  </div>
-);
 
 //  This is a minimal example of a custom component, you can view more complex input types here:
 //  https://www.builder.io/c/docs/custom-react-components#input-types
-Builder.registerComponent(MyCustomComponent, {
-  name: 'ExampleCustomComponent',
+Builder.registerComponent(Header, {
+  name: 'Header',
   inputs: [
     { name: 'title', type: 'string', defaultValue: 'I am a React component!' },
     {
@@ -118,5 +111,5 @@ Builder.registerComponent(MyCustomComponent, {
 // https://www.builder.io/c/docs/custom-components-visual-editor#:~:text=than%20this%20screenshot.-,organizing%20your%20components%20in%20custom%20sections,-You%20can%20create
 Builder.register('insertMenu', {
   name: 'My Components',
-  items: [{ item: 'ExampleCustomComponent', name: 'My React Component' }],
+  items: [{ item: 'Header', name: 'My React Component' }],
 });
