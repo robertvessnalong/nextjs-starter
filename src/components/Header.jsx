@@ -1,13 +1,12 @@
 import Link from 'next/link';
 
-
 const Header = () => {
   return (
     <>
       <nav className="main-nav">
-        <Link href='/' className='logo'>
-        <img
-            src='/assets/images/LakeTrustLogo_Horizontal_NoTagline_White.png'
+        <Link href="/" className="logo">
+          <img
+            src="/assets/images/LakeTrustLogo_Horizontal_NoTagline_White.png"
             alt="Lake Trust Credit Union"
             className="ie-logo"
           />
@@ -34,7 +33,12 @@ const Header = () => {
             </Link>
           </li>
           <li className="btn">
-            <Link href="/our-story" tabIndex="3" data-name="explore" id="explore">
+            <Link
+              href="/our-story"
+              tabIndex="3"
+              data-name="explore"
+              id="explore"
+            >
               Our Story
             </Link>
           </li>
@@ -70,8 +74,8 @@ const Header = () => {
                     Business
                   </Link>
                 </div>
-                <form id="personal-form" style={{display: "block"}}>
-                  <div className="form-error"style={{display: "none"}}></div>
+                <form id="personal-form" style={{ display: 'block' }}>
+                  <div className="form-error" style={{ display: 'none' }}></div>
                   <div className="input-group">
                     <input
                       type="text"
@@ -111,19 +115,19 @@ const Header = () => {
                         tabIndex="0"
                         className="passwordLink"
                       >
-                        {" "}
-                        I forgot my username / password.{" "}
+                        {' '}
+                        I forgot my username / password.{' '}
                       </Link>
-                    </div>{" "}
-                    First time user?{" "}
+                    </div>{' '}
+                    First time user?{' '}
                     <Link
                       href="/get-online-banking"
                       id="online-banking-enrollment"
                       tabIndex="0"
-                      style={{display: "inline", marginLeft: '5px'}}
+                      style={{ display: 'inline', marginLeft: '5px' }}
                     >
-                      {" "}
-                      Enroll here.{" "}
+                      {' '}
+                      Enroll here.{' '}
                     </Link>
                   </div>
                   <hr />
@@ -137,7 +141,7 @@ const Header = () => {
                     Pay Your Loan
                   </Link>
                 </form>
-                <form id="commercial-form"  style={{display: "none"}}>
+                <form id="commercial-form" style={{ display: 'none' }}>
                   <div className="input-group">
                     <input
                       type="text"
@@ -147,7 +151,10 @@ const Header = () => {
                       aria-label="Username"
                       tabIndex="0"
                     />
-                    <div className="error username-error" style={{display: "none"}}>
+                    <div
+                      className="error username-error"
+                      style={{ display: 'none' }}
+                    >
                       Please enter a username.
                     </div>
                   </div>
@@ -161,7 +168,10 @@ const Header = () => {
                       tabIndex="0"
                       autoComplete="off"
                     />
-                    <div className="error password-error" style={{display: "none"}}>
+                    <div
+                      className="error password-error"
+                      style={{ display: 'none' }}
+                    >
                       Please enter a password.
                     </div>
                   </div>
@@ -180,8 +190,8 @@ const Header = () => {
                         tabIndex="0"
                         className="passwordLink"
                       >
-                        {" "}
-                        I forgot my username / password.{" "}
+                        {' '}
+                        I forgot my username / password.{' '}
                       </Link>
                     </div>
                     <div>Don't have business membership?</div>
@@ -190,8 +200,8 @@ const Header = () => {
                       tabIndex="0"
                       target="_blank"
                     >
-                      {" "}
-                      View Application (PDF){" "}
+                      {' '}
+                      View Application (PDF){' '}
                     </Link>
                   </div>
                 </form>
@@ -199,7 +209,7 @@ const Header = () => {
             </div>
             <div
               className="authenticated-container dropdown-box"
-              style={{display: "none"}}
+              style={{ display: 'none' }}
             >
               <ul className="authenticated-menu">
                 <li>
@@ -235,7 +245,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <nav className="sub-nav">
+      <nav className="sub-nav" style={{ display: 'none' }}>
         <div className="sub-nav-container personal">
           <ul className="sub-nav-list">
             <li className="sub-nav-list-item">
@@ -298,7 +308,9 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/Personal/Loans/Home-Loans.html">Home Loans</Link>
+                      <Link href="/Personal/Loans/Home-Loans.html">
+                        Home Loans
+                      </Link>
                     </li>
                     <li>
                       <Link href="/Personal/Loans/Personal-Loans.html">
@@ -330,7 +342,7 @@ const Header = () => {
                   <img src="/LakeTrustWebsite/media/Icons/make-loan-payment-icon.svg" />
 
                   <p className="sub-nav-dropdown-title">Make a Loan Payment</p>
-                  <p className="sub-nav-dropdown-text" style={{width: 100}}>
+                  <p className="sub-nav-dropdown-text" style={{ width: 100 }}>
                     Making a one-time loan payment has never been easier.
                   </p>
                   <Link
@@ -516,7 +528,9 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/Business/Loans/SBA-Loans.html">SBA Loans</Link>
+                      <Link href="/Business/Loans/SBA-Loans.html">
+                        SBA Loans
+                      </Link>
                     </li>
                     <li>
                       <Link href="/Business/Loans/Micro-Business-Loan.html">
@@ -625,14 +639,19 @@ const Header = () => {
                     Support the Lake Trust Foundation to make an impact in your
                     community.
                   </p>
-                  <Link className="sub-nav-dropdown-button" href="/Foundation/#donate">
+                  <Link
+                    className="sub-nav-dropdown-button"
+                    href="/Foundation/#donate"
+                  >
                     Donate Now
                   </Link>
                 </div>
               </div>
             </li>
             <li className="sub-nav-list-item">
-              <Link href="/Our-Story/Annual-Impact-Report/2021/">Impact Report</Link>
+              <Link href="/Our-Story/Annual-Impact-Report/2021/">
+                Impact Report
+              </Link>
             </li>
             <li className="sub-nav-list-item">
               <Link href="https://latest.laketrust.org/blog" target="_blank">
@@ -648,49 +667,76 @@ const Header = () => {
         </div>
       </nav>
       <nav className="mobile-nav">
-    <Link href="../index.html" className="logo" tabIndex="0">
-        {/* <img src="LakeTrustWebsite/media/site/LTCULOGO.png" alt="Lake Trust Credit Union" className="not-ie-logo">  */}
-        <img src='/assets/images/LakeTrustLogo_Horizontal_NoTagline_White.png' alt="Lake Trust Credit Union" className="ie-logo" />
-    </Link>
+        <Link href="../index.html" className="logo" tabIndex="0">
+          {/* <img src="LakeTrustWebsite/media/site/LTCULOGO.png" alt="Lake Trust Credit Union" className="not-ie-logo">  */}
+          <img
+            src="/assets/images/LakeTrustLogo_Horizontal_NoTagline_White.png"
+            alt="Lake Trust Credit Union"
+            className="ie-logo"
+          />
+        </Link>
 
-    <Link href="../search.html" id="search-icon" aria-label="Open Search" tabIndex="0">
-        <i className="material-icons">
-            search
-        </i>
-    </Link>
+        <Link
+          href="../search.html"
+          id="search-icon"
+          aria-label="Open Search"
+          tabIndex="0"
+        >
+          <i className="material-icons">search</i>
+        </Link>
 
-    <Link href="#" tabIndex="5" data-name="signin" className="tablet-nav-signin" style={{position: 'absolute', right: 85, color: '#fff'}}>Sign In</Link>
+        <Link
+          href="#"
+          tabIndex="5"
+          data-name="signin"
+          className="tablet-nav-signin"
+          style={{ position: 'absolute', right: 85, color: '#fff' }}
+        >
+          Sign In
+        </Link>
 
-    <div className="bar-wrapper">
-        <div className="top bar"></div>
-        <div className="middle bar"></div>
-        <div className="bottom bar"></div>
-    </div>
+        <div className="bar-wrapper">
+          <div className="top bar"></div>
+          <div className="middle bar"></div>
+          <div className="bottom bar"></div>
+        </div>
 
-    <div className="mobile-nav-drawer">
-        <div className="mobile-nav-list">
+        <div className="mobile-nav-drawer">
+          <div className="mobile-nav-list">
             <ul>
-                <li data-name="personal">
-                    Personal <i className="material-icons">keyboard_arrow_right</i>
-                </li>
-                <li data-name="business">
-                    Business <i className="material-icons">keyboard_arrow_right</i>
-                </li>
-                <li data-name="explore">
-                    Our Story <i className="material-icons">keyboard_arrow_right</i>
-                </li>
+              <li data-name="personal">
+                Personal <i className="material-icons">keyboard_arrow_right</i>
+              </li>
+              <li data-name="business">
+                Business <i className="material-icons">keyboard_arrow_right</i>
+              </li>
+              <li data-name="explore">
+                Our Story <i className="material-icons">keyboard_arrow_right</i>
+              </li>
             </ul>
 
             <div className="mobile-nav-list-divider"></div>
 
             <ul>
-                <li><Link href="/locations.html">Locations</Link></li>
-                <li><Link href="/Personal/contact-us.html">Contact</Link></li>
-                <li><Link href="https://join.laketrust.org/#/" target="_blank" className="join oao-link">Join</Link></li>
+              <li>
+                <Link href="/locations.html">Locations</Link>
+              </li>
+              <li>
+                <Link href="/Personal/contact-us.html">Contact</Link>
+              </li>
+              <li>
+                <Link
+                  href="https://join.laketrust.org/#/"
+                  target="_blank"
+                  className="join oao-link"
+                >
+                  Join
+                </Link>
+              </li>
             </ul>
+          </div>
         </div>
-    </div>
-</nav>
+      </nav>
     </>
   );
 };
