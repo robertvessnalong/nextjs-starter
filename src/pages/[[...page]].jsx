@@ -11,7 +11,6 @@ import {
 } from '@builder.io/react';
 import Footer from '@/components/Footer';
 
-
 export async function getStaticProps({ params }) {
   // Fetch the first page from Builder that matches the current URL.
   // Use the `userAttributes` field for targeting content.
@@ -75,7 +74,7 @@ export default function Page({ page }) {
       </header>
 
       {/* Render the Builder page */}
-      <main>
+      <main style={{ marginTop: 100 }}>
         <BuilderComponent model="page" content={page} />
       </main>
 
@@ -86,4 +85,3 @@ export default function Page({ page }) {
     </>
   );
 }
-
