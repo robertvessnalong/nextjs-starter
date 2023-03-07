@@ -74,7 +74,7 @@ export default function Page({ page }) {
       </header>
 
       {/* Render the Builder page */}
-      <main style={{ marginTop: 100 }}>
+      <main style={{ marginTop: 60 }}>
         <BuilderComponent model="page" content={page} />
       </main>
 
