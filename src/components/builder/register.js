@@ -7,7 +7,7 @@ const config = [MyCustomComponent];
 Builder.registerComponent(
   dynamic(() => import('./MyCustomComponent')),
   {
-    name: 'ExampleCustommponent',
+    name: 'ExampleCustomComponent',
     inputs: [
       {
         name: 'title',
