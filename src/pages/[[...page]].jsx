@@ -3,12 +3,7 @@ import DefaultErrorPage from 'next/error';
 import Header from '@/components/Header';
 import Head from 'next/head';
 import React from 'react';
-import {
-  BuilderComponent,
-  builder,
-  useIsPreviewing,
-  Builder,
-} from '@builder.io/react';
+import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react';
 import Footer from '@/components/Footer';
 
 export async function getStaticProps({ params }) {
@@ -74,7 +69,7 @@ export default function Page({ page }) {
       </header>
 
       {/* Render the Builder page */}
-      <main style={{ marginTop: 60 }}>
+      <main style={{ marginTop: 60, backgroundColor: '#fff' }}>
         <BuilderComponent model="page" content={page} />
       </main>
 
