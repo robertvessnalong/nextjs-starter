@@ -1,6 +1,6 @@
 import { Builder } from '@builder.io/react';
 import dynamic from 'next/dynamic';
-import { MyCustomComponent } from './TestComponet';
+import { MyCustomComponent } from './MyCustomComponent';
 
 const config = [MyCustomComponent];
 

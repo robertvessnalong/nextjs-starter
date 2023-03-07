@@ -1,4 +1,3 @@
-import { Builder } from "@builder.io/react";
 
 //  This is an example of registering a custom component to be used in Builder.io.
 //  You would typically do this in the file where the component is defined.
