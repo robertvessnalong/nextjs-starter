@@ -8,7 +8,7 @@ config.forEach((component) => {
   //  This is a minimal example of a custom component, you can view more complex input types here:
   //  https://www.builder.io/c/docs/custom-react-components#input-types
   Builder.registerComponent(
-    dynamic(() => import(component)),
+    dynamic(() => import('./MyCustomComponent')),
     {
       name: 'ExampleCustommponent',
       inputs: [
