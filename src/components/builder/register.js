@@ -4,25 +4,21 @@ import { MyCustomComponent } from './MyCustomComponent';
 
 const config = [MyCustomComponent];
 
-config.forEach((component) => {
-  //  This is a minimal example of a custom component, you can view more complex input types here:
-  //  https://www.builder.io/c/docs/custom-react-components#input-types
-  Builder.registerComponent(
-    dynamic(() => import('./MyCustomComponent')),
-    {
-      name: 'ExampleCustommponent',
-      inputs: [
-        {
-          name: 'title',
-          type: 'string',
-          defaultValue: 'I am a React component!',
-        },
-        {
-          name: 'description',
-          type: 'string',
-          defaultValue: 'Find my source in /pages/[...page].js',
-        },
-      ],
-    }
-  );
-});
+Builder.registerComponent(
+  dynamic(() => import('./MyCustomComponent')),
+  {
+    name: 'ExampleCustommponent',
+    inputs: [
+      {
+        name: 'title',
+        type: 'string',
+        defaultValue: 'I am a React component!',
+      },
+      {
+        name: 'description',
+        type: 'string',
+        defaultValue: 'Find my source in /pages/[...page].js',
+      },
+    ],
+  }
+);
