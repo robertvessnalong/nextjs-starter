@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import DefaultErrorPage from 'next/error';
+import ErrorPage from './404';
 import Header from '@/components/Header';
 import Head from 'next/head';
 import React from 'react';
@@ -53,7 +53,7 @@ export default function Page({ page }) {
   //  Add your error page here to return if there are no matching
   //  content entries published in Builder.
   if (!page && !isPreviewing) {
-    return <DefaultErrorPage statusCode={404} />;
+    return <ErrorPage />;
   }
 
   return (
