@@ -19,7 +19,11 @@ export async function getStaticProps({ params }) {
 
   if (!page) {
     return {
-      notFound: true,
+      redirect: {
+        destination: '/404',
+        permanent: false,
+        // statusCode: 301
+      },
     };
   }
 
