@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import ErrorPage from './404';
 import Head from 'next/head';
 import React from 'react';
 import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react';
@@ -41,8 +40,6 @@ export default function Page({ page }) {
   const router = useRouter();
   //  This flag indicates if you are viewing the page in the Builder editor.
   const isPreviewing = useIsPreviewing();
-  const show404 = router.isFallback || (!page && isPreviewing);
-
 
   if (router.isFallback) {
     return <h1>Loading...</h1>;
