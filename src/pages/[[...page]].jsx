@@ -11,21 +11,9 @@ export async function getStaticProps({ params }) {
   // For more, see https://www.builder.io/c/docs/targeting-with-builder
   const page = await builder
     .get('page', {
-      userAttributes: {
-        urlPath: '/' + (params?.page?.join('/') || ''),
-      },
+      userAttributes: { urlPath: '/' + (params?.page?.join('/') || '') },
     })
     .toPromise();
-
-  if (!page) {
-    return {
-      redirect: {
-        destination: '/404',
-        permanent: false,
-        // statusCode: 301
-      },
-    };
-  }
 
   return {
     props: {
@@ -55,8 +43,15 @@ export default function Page({ page }) {
   const isPreviewing = useIsPreviewing();
   const show404 = router.isFallback || (!page && isPreviewing);
 
-  if (show404)  {
-    return <ErrorPage />;
+
+  if (router.isFallback) {
+    return <h1>Loading...</h1>;
+  }
+
+  //  Add your error page here to return if there are no matching
+  //  content entries published in Builder.
+  if (!page && !isPreviewing) {
+    return <DefaultErrorPage statusCode={404} />;
   }
 
   return (
