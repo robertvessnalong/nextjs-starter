@@ -1,10 +1,9 @@
 import { useRouter } from 'next/router';
 import ErrorPage from './404';
-import Header from '@/components/Header';
 import Head from 'next/head';
 import React from 'react';
 import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react';
-import Footer from '@/components/Footer';
+import Layout from '@/components/Layout';
 
 export async function getStaticProps({ params }) {
   // Fetch the first page from Builder that matches the current URL.
@@ -18,11 +17,16 @@ export async function getStaticProps({ params }) {
     })
     .toPromise();
 
+  if (!page) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: {
       page: page || null,
     },
-    revalidate: 5,
   };
 }
 
@@ -45,14 +49,9 @@ export default function Page({ page }) {
   const router = useRouter();
   //  This flag indicates if you are viewing the page in the Builder editor.
   const isPreviewing = useIsPreviewing();
+  const show404 = router.isFallback || (!page && isPreviewing);
 
-  if (router.isFallback) {
-    return <h1>Loading...</h1>;
-  }
-
-  //  Add your error page here to return if there are no matching
-  //  content entries published in Builder.
-  if (!page && !isPreviewing) {
+  if (show404)  {
     return <ErrorPage />;
   }
 
@@ -63,20 +62,10 @@ export default function Page({ page }) {
         <title>{page?.data.title}</title>
         <meta name="description" content={page?.data.descripton} />
       </Head>
-      <header>
-        {/* Put your header or main layout here */}
-        <Header />
-      </header>
 
-      {/* Render the Builder page */}
-      <main style={{ marginTop: 60, backgroundColor: '#fff' }}>
+      <Layout>
         <BuilderComponent model="page" content={page} />
-      </main>
-
-      <footer>
-        {/* Put your footer or main layout here */}
-        <Footer />
-      </footer>
+      </Layout>
     </>
   );
 }
